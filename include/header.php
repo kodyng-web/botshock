@@ -1,7 +1,7 @@
 <header>
 <nav class="navbar--main home">
     <div class="navbar__wrapper f-container">
-        <a class="navbar__logo" href="index.php">
+        <a class="navbar__logo" href="index.html">
             <img id="logo-white" src="images/logo-white.svg" />
             <svg version="1.1" id="logo-color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 196 40" enable-background="new 0 0 196 40" xml:space="preserve" height="40" width="196" viewBox="0 0 196 40">
                 <g class="brand-name">
@@ -149,7 +149,7 @@
             <nav class="">
                 <div class="navbar__wrapper f-container">
                     <div class="menu__item navbar__logo">
-                        <a href="index.php">
+                        <a href="index.html">
                             <img id="logo-white" src="images/logo-white.svg" />
                             <svg version="1.1" id="logo-mobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="60px" viewBox="0 0 300 60" enable-background="new 0 0 300 60" xml:space="preserve">
                                 <g class="brand-name">
@@ -232,7 +232,7 @@
                         </a>
                     </div>
                     <div class="menu__item navbar__set">
-                        <a href="signin.php">
+                        <a href="signin.html">
                             <h5 class="before-signin">SIGN IN</h5>
                             <h5 class="after-signin">Hello, <span>lorem ipsum<span></h5>
                         </a>
@@ -249,19 +249,19 @@
 
                     <div class="col-sm-12 text-right">
                         <div class="menu__item right first">
-                            <a href="about.php" title="">
+                            <a href="about.html" title="">
                                 <h3 class="mid">ABOUT US</h3>
                                 <h5 class="text-lighter">What is BotShock</h5>
                             </a>
                         </div>
                         <div class="menu__item right">
-                            <a href="list.php" title="">
+                            <a href="list.html" title="">
                                 <h3 class="mid">BOT LIST</h3>
                                 <h5 class="text-lighter">See what we got</h5>
                             </a>
                         </div>
                         <div class="menu__item right">
-                            <a href="contact-us.php" title="">
+                            <a href="contact-us.html" title="">
                                 <h3 class="mid">CONTACT US</h3>
                                 <h5 class="text-lighter">Any question? Don’t be shy</h5>
                             </a>
@@ -271,10 +271,10 @@
                     <div class="col-sm-12 flex-space">
                         <div class="text-left ">
                             <div class="menu__item left">
-                                <a href="terms.php" title="" class="inline-block">
+                                <a href="terms.html" title="" class="inline-block">
                                     <h5 class="text-light">Terms</h5>
                                 </a>
-                                <a href="press.php" title="" class="inline-block">
+                                <a href="press.html" title="" class="inline-block">
                                     <h5 class="text-light"> Press</h5>
                                 </a>
                             </div>

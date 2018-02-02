@@ -5,7 +5,7 @@ $(document).ready(function () {
     //checkBrowser
     if(navigator.appName.indexOf("Internet Explorer")!=-1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./))
     {
-        window.location = "browser.php";
+        window.location = "browser.html";
         return;
     }
  

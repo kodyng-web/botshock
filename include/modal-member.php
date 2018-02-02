@@ -30,7 +30,7 @@
                                             <span class="custom-control-indicator"></span>
                                             <span class="custom-control-description">Remember me</span>
                                         </label>
-                                        <a href="forget.php" class="text-right">
+                                        <a href="forget.html" class="text-right">
                                             <p>Forgot password?</p>
                                         </a>
                                     </div>

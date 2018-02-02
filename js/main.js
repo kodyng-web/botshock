@@ -3,7 +3,7 @@
  * http://www.codrops.com
  *
  * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
+ * http://www.opensource.org/licenses/mit-license.html
  * 
  * Copyright 2016, Codrops
  * http://www.codrops.com

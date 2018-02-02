@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="btn-view text-center">
-                                    <a href="detail.php">
+                                    <a href="detail.html">
                                         <h5>VIEW THIS BOT</h5>
                                     </a>
                                 </div>
@@ -60,7 +60,7 @@
                                     </div>
                                 </div>
                                 <div class="btn-view text-center">
-                                    <a href="detail.php">
+                                    <a href="detail.html">
                                         <h5>VIEW THIS BOT</h5>
                                     </a>
                                 </div>
@@ -93,7 +93,7 @@
                                     </div>
                                 </div>
                                 <div class="btn-view text-center">
-                                    <a href="detail.php">
+                                    <a href="detail.html">
                                         <h5>VIEW THIS BOT</h5>
                                     </a>
                                 </div>

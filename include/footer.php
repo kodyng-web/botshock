@@ -9,22 +9,22 @@
         <nav class="footer-nav">
             <ul class="">
                 <li>
-                    <a href="about.php">
+                    <a href="about.html">
                         <h4>About Us</h4>
                     </a>
                 </li>
                 <li>
-                    <a href="contact-us.php">
+                    <a href="contact-us.html">
                         <h4>Contact US</h4>
                     </a>
                 </li>
                 <li>
-                    <a href="terms.php">
+                    <a href="terms.html">
                         <h4>Terms</h4>
                     </a>
                 </li>
                 <li>
-                    <a href="press.php">
+                    <a href="press.html">
                         <h4>Press</h4>
                     </a>
                 </li>
