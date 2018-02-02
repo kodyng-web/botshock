@@ -1,0 +1,40 @@
+.btn-get{  
+    h5{
+        background: #c32f47;
+        padding: 2em 4em;
+    }
+}
+.btn-group{
+    a{
+        margin-right:3em;
+    }
+}
+.btn-outer{
+    padding: 2em 2em 2em 3em;
+    border: 1px solid #adadad;
+    display: inline-block;
+    min-width: 300px;
+}
+.btn-outer.white{
+    border-color: #fff;
+}
+.btn-outer i{
+    padding-left: 6em;
+}
+.btn-more{
+    display:inherit;
+    i{
+        padding-left: 1em;
+    }
+}
+.btn-view{
+    background: #c32f47;
+    color: #fff;
+    a{
+        padding: 2em 0;
+        display: block;
+    }
+    h5{
+        font-size: 1em;
+    }
+}

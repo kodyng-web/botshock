@@ -1,0 +1,131 @@
+.global-footer {
+    padding: 3.75em 0 3.125em;
+    background: $color-red;
+    color: #fff;
+    text-align: left;
+    z-index: 9;
+    position: relative;
+    .inner {
+        position: relative;
+        max-width: 87.5%;
+        margin: 0 auto;
+        @include sm{
+            position: relative;
+            .footer-right.text-right{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 5em;
+            }
+        }
+
+    }
+    .footer-nav a {
+
+        text-transform: uppercase;
+    }
+    .btt{
+        position: fixed;
+        bottom: 2em;
+        right: 2em;
+        z-index: 999;
+        a{
+            background-color: #8B2442;
+            padding: 1em 1.6em;
+            i{
+                font-size: 1em;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        @include xs{
+            right: 1em;
+        }
+    }
+
+
+}
+.footer-company{
+    padding-top: 9.375em;
+    @include sm{
+        padding-top: 4em;
+    }
+}
+
+
+.footer-nav{
+    li {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+
+        &:before {
+            display: none;
+        }
+
+        a {
+            margin: 0  2.35em;
+            display: inline-block;
+        }
+
+        &:first-of-type a {
+            margin-left: 0;
+        }
+
+        a h4{
+            position: relative;
+            padding-bottom: 1em;
+            display: inline-block;
+            overflow: hidden;
+            @include sm{
+                font-size: 1em;
+            }
+        }
+        a h4::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            @include sm{
+                bottom: 10px;
+                height: 2px;
+            }
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-color: #fff;
+            -webkit-transform: translate(-101%, 0);
+            transform: translate(-101%, 0);
+            -webkit-transition: -webkit-transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: -webkit-transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+            @include md{
+                width: 0;
+            }
+        }
+    
+        a.anim-reverse h4::after {
+            -webkit-transform: translate(101%, 0);
+            transform: translate(101%, 0);
+        }
+    
+        a:hover h4::after, .a.is-active h4::after {
+            -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+        }
+
+        @include lg{
+            display: block;
+            a{
+                margin-left: 0;
+            }
+        }
+    }
+
+}
+

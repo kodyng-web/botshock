@@ -1,0 +1,26 @@
+section{
+    .f-container{
+        float: none;
+    }
+    .block-red{
+        background: #c32f47;
+        padding: 4em 0;
+    }
+    .block-purple{
+        background: #170827;
+        padding: 4em 0;
+        .flex-equal-height-card::after{
+            display: block;
+            height: 10px;
+            left: 74%;
+            top: 2em;
+            width: 140px;
+            position: absolute;
+            content: "";
+            background: url(../images/bg-arrow-line.svg) no-repeat;
+        }
+        .flex-equal-height-card.last:after{
+            display: none;
+        }
+    }
+}

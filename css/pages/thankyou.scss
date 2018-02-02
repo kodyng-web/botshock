@@ -1,0 +1,128 @@
+.thankyou {
+  h1 {
+    letter-spacing: 0.2em;
+    @include sm{
+      letter-spacing: 0.1em;
+    }
+  }
+  section.hero {
+    background-color: #009a9f;
+  }
+  p a {
+    text-decoration: underline;
+  }
+  section.myorder {
+    .order-tab .inner-wrap .flex-2 {
+      padding-top: 0;
+    }
+    .tab-title {
+      background: #1aa4a9;
+      &:after {
+        @include md{
+          background: transparent;
+        }
+      }
+    }
+    .order-tab {
+      .inner-wrap {
+        background: #0d9fa4;
+        @include md{
+          background: #fff;
+        }
+      }
+      .flex-2.bor{
+        &:before{
+          background: transparent;
+        }
+          &:after {
+            background: #007b7f;
+            @include md{
+              background: transparent;
+            }
+          }
+          @include md{
+            margin-bottom: 2em;
+          }
+      }
+      .flex-1 {
+        &:before{
+          background: transparent;
+        }
+        &::after {
+          background: #007b7f;
+        }
+        &.last {
+          &::after, ::after {
+            display: none;
+          }
+        }
+      }
+      .flex-2, .flex-1 {
+        background: #0d9fa4;
+      }
+      .flex-2{
+        @include md{
+          background: #fff;
+        }
+      }
+    }
+  }
+  .line-break {
+    border-bottom: 1px solid #ddd;
+    height: 0em;
+    /* margin-bottom: 3em; */
+    position: relative;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+  }
+  .est-time span {
+    font-weight: bold;
+  }
+  .total-price .row {
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    &:after,&:before{
+        display: none;
+    }
+    @include md{
+      justify-content: space-between;
+    }
+    div:nth-child(1) {
+      flex: 1 0 auto;
+    }
+    div:nth-child(2) {
+      font-size: 1.875em;
+      margin-right: 0.5em;
+      margin-left: 1em;
+    }
+  }
+  section.myorder .order-tab {
+    .inner-wrap {
+      padding: 2em 6em 3em 1em;
+      @include md{
+          padding-bottom: 2em;
+      }
+      @include sm{
+          padding: 2em;
+      }
+      @include xs{
+          padding: 2em 1em 2em;
+      }
+    }
+    .round {
+      margin-left: 2em;
+    }
+    .row.flex-space{
+      @include md{
+        color: #000;
+        .tab-title{
+          color: #fff;
+        }
+        .text-lighter span:last-child{
+          font-family: "NexaBold";
+        }
+      }
+    }
+  }
+}

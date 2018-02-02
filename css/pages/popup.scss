@@ -1,0 +1,127 @@
+.modal-body{
+    text-align: left;
+    @include md{
+        margin-top: 2em;
+    }
+    @include sm{
+        overflow: auto;
+    }
+    h2{
+        display: inline-block;
+    }
+    .flex-equal-height{
+        @include sm{
+            flex-wrap: wrap;
+        }
+    .flex-equal-height-card{
+        letter-spacing: 1px;
+        padding: 0 4em 0 0; 
+        align-self: flex-start;  
+        position: relative;  
+        @include md{
+            padding: 0 2em 0 0;
+        }
+        @include sm{
+            flex-basis: 100%;
+            padding: 0;
+            margin: 2em 0;
+        }
+        .form-group.row{
+            .flex-space{
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                .custom-control{
+                    @media screen and (min-width: 768px) and (max-width: 1024px) {
+                        margin-right: 0;
+                    }
+                }
+                .custom-checkbox{
+                    @include xs{
+                        padding-left: 2.4rem;
+                    }
+                }
+                a, label{
+                    @include xxs{
+                        margin-top: 1em;
+                    }
+                }
+            }
+            .col-sm-7.flex-space{
+                justify-content: space-between;
+            }
+        }
+    } 
+    .flex-equal-height-card:nth-child(2){ 
+        padding: 0 0 0 4em;     
+        @include md{
+            padding: 0 0 0 2em;
+        } 
+        @include sm{
+            padding: 0;
+        }
+             
+    } 
+    .flex-equal-height-card:nth-child(2)::after{
+        display: block;
+        top:0;
+        left: 0;
+        content: ""; 
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: #ccc;
+        @include sm{
+            display: none;
+        }
+    }
+    .flex-equal-height-card a{
+        color: #333;
+    }
+    h3{
+        color: #666;
+        letter-spacing: 3px;
+        padding-bottom: 1em;
+    }
+
+    .form-group.flex-space {
+        text-align: center;
+        padding-top: 2em;
+    }
+    .form-group.flex-space a{
+        padding: 2em 1em;
+    }
+    .form-group.flex-space span{
+        align-self: center;  
+        font-family: "NexaBold",Helvetica,Arial,sans-serif;
+    }
+    .form-group.flex-space p{
+        color: #fff;
+    }
+    label.col-sm-5{
+        font-size: 1.5em;
+    }
+    span{
+        font-size: .875em;
+        line-height: 1.6;
+    }
+}
+}
+
+.modal-overlay{
+    z-index: 1000;
+}
+
+.modal-frame{
+    z-index: 1001;
+
+}    
+@include md{
+       .modal{
+           max-height: 100vh;
+           overflow-y: scroll;
+           .modal-inset{
+               padding: 4em 2em 2em;
+           }
+       }
+    }

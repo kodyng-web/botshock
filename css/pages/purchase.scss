@@ -1,0 +1,252 @@
+.purchase {
+    section.myorder {
+        h3{
+          padding: 0;
+        }
+        .order-tab .row {
+            padding-top: 0;
+            margin-top: 2.5em;
+        }
+
+        .tab-title {
+            background: #c32f47;
+        }
+
+        .order-tab {
+            .inner-wrap {
+                padding: 2em 6em 3em 1em;
+                @include xl{
+                    padding-right: 2em;
+                }
+                @include lg{
+                    padding-right: 2em;
+                }
+                @include md{
+                    padding-right: 6em;
+                    padding-bottom: 2em;
+                }
+                @include sm{
+                    padding: 2em;
+                }
+                @include xs{
+                    padding: 2em 1em 2em;
+                }
+            }
+            .flex-2,.flex-1{
+                background: #3a284b;
+            }
+            .round {
+                width: 90px;
+                height: 90px;
+                margin-left: 2em;
+                @include sm{
+                    width: 70px;
+                    height: 70px;
+                }
+                @include xs{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .flex-2.bor.md-block{
+                .inner-wrap{
+                    .flex-2{
+                        @include md{
+                            padding-top: 0;
+                            @include sm{
+                                h4{
+                                    vertical-align: middle;                                
+                                }
+                            }
+                        }
+                        
+                    }
+                    @include md{
+                        padding-bottom: 2em;
+                        margin-bottom: 2em;
+                    }
+                    @include md{
+                        padding-bottom: 2em;
+                    }
+                    @include sm{
+                        padding: 2em;
+                    }
+                    @include xs{
+                        padding: 2em 1em 2em;
+                    }
+                }
+            }
+            .t-description{
+                .inner-wrap{
+                    @include md{
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    h3.title {
+        margin-top: 2.5em;
+        margin-bottom: 1.5em;
+        @include md{
+            margin: 1em 0;
+        }
+        @include sm{
+            margin: 1.5em 0;
+        }
+    }
+    .f-container > h3.title{
+        margin-top: 0;
+    }
+
+    .line-break {
+        border-bottom: 1px solid #ddd;
+        height: 3em;
+        margin-bottom: 3em;
+        position: relative;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+    }
+
+    .radio {
+        position: relative;
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+        width: 100%;
+
+        input[type="radio"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+            cursor: pointer;
+
+            ~ .radio-icon {
+                position: relative;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border: 4px solid #fff;
+                background-color: #fff;
+                border-radius: 50%;
+                vertical-align: top;
+                /* left: 0; */
+                @include sm{
+                    width: 20px;
+                    height: 20px;
+                    border-width: 1px;
+                }
+            }
+
+            &:hover ~ .radio-icon, &:focus ~ .radio-icon {
+                border-color: #999;
+            }
+
+            &:checked ~ .radio-icon {
+                background-color: #FFF;
+                border-color: #FFF;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    bottom: 4px;
+                    left: 4px;
+                    background-color: #c32f47;
+                    border-radius: 50%;
+                }
+            }
+
+            &:disabled ~ .radio-icon {
+                background-color: #eee;
+                border-color: #ddd;
+                cursor: default;
+
+                &:after {
+                    background-color: #bbb;
+                }
+            }
+        }
+
+        label {
+            display: inline-block;
+            color: #fff;
+            line-height: 1.5em;
+            font-size: 1.5em;
+            margin-left: 0.5em;
+            max-width: 80%;
+            @include lg{
+                @include sm{
+                    font-size: 1em;
+                }
+            }
+
+            span {
+                display: block;
+
+                &:nth-child(1) {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .align-bottom {
+        align-items: flex-end;
+    }
+
+    .btn-proceed {
+        background-color: #08bbac;
+        padding: 2em 8em;
+        -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+        transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+        &:hover{
+            // border-color: #C32F47;
+            // background-color: #C32F47;
+            // color: #fff;
+            -webkit-transform: translate3d(0, -2px, 0);
+            transform: translate3d(0, -2px, 0);
+            -webkit-box-shadow: 0px 15px 40px -5px rgba(7, 61, 62, 0.5), 0 5px 15px -4px rgba(7, 61, 62, 0.4);
+            box-shadow: 0px 15px 40px -5px rgba(7, 61, 62, 0.5), 0 5px 15px -4px rgba(7, 61, 62, 0.4);
+        }
+        @include md{
+            width: 100%;
+            margin-top: 2em;
+        }
+    }
+
+    .est-time span {
+        font-weight: bold;
+    }
+
+    .total-price .row {
+        margin: 1em 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div:nth-child(1) {
+            flex: 1 0 auto;
+        }
+        div:nth-child(2) {
+            font-size: 1.875em;
+            margin-right: 0.5em;
+            margin-left: 1em;
+        }
+        &:after,&:before{
+            display: none;
+        }
+        @include md{
+            margin: 2em 0;
+        }
+    }
+}
+
+/* radio button */

@@ -1,0 +1,215 @@
+.about{
+    .hero{
+        background: url(../images/bg-about.jpg) no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        // padding-top: 16em;
+        @include sm{
+            padding-top: 9em;
+        }
+        .f-container{
+            .ani-text{
+                h3{
+                    margin-right: 40%;
+                }
+            }
+        } 
+    }
+    .mode-block{
+        .block-red{
+            .f-container{
+                .text-center{
+                    @include sm{
+                        margin-bottom: 2em;
+                    }
+                }
+            }
+        }
+    }
+    .how-works {
+        h3{
+            margin-bottom: 2em;
+        }
+        .bottle{
+            background: #231233;
+            color: #fff;
+            .flex-collection-item{
+                position: relative;
+                .flex-center{
+                    @include md{
+                        margin: 4em 0;
+                    }
+                }
+                &:before{
+                    display: block;
+                    pointer-events: none;
+                    position: absolute;
+                    z-index: 0;
+                    top: 45%;
+                    left: -50px;
+                    content: url(../images/tri.png);
+                    background-repeat: no-repeat;
+                    @include md{
+                        left: initial;
+                        right: initial;
+                        top: -20px;
+                        margin: 0 auto;
+                        width: 100%;
+                        text-align: center;
+                        content: url(../images/tri-down.png);
+                    }
+                    @include xs{
+                        content: url(../images/tri-down-m.png);
+                    }
+                }
+                &:after{
+                    display: block;
+                    pointer-events: none;
+                    position: absolute;
+                    z-index: 1;
+                    top: 45%;
+                    right: -30px;
+                    content: url(../images/tri.png);
+                    background-repeat: no-repeat;
+                    @include md{
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        text-align: center;
+                        bottom: -5%;
+                        top: initial;
+                        margin: 0 auto;
+                        content: url(../images/tri-down.png);
+                    }
+                    @include xs{
+                        content: url(../images/tri-down-m.png);
+                    }
+                }
+            }
+        }
+
+        .flex-collection-cell{
+
+
+            .flex-collection-cell._1of2 {
+                .flex-center{
+                    padding: 6em 1em 3em;
+                    @include sm{
+                        padding: 3em 2em;
+                    }
+                }
+            }
+            .flex-collection-item {            
+                &:hover ,
+                &:hover *{
+                    @media screen and (min-screen: 1025px){
+                        -webkit-animation-play-state: paused;
+                        animation-play-state: paused;
+                    }
+                    opacity: 1;
+                }
+                .icon{
+                    display: block;
+                    margin-bottom: 4em;
+                    border: 8px solid #fff;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    @include md{
+                        // -webkit-clip-path: circle(50% at 50% 50%);
+                    }
+                }
+                p{
+                    color: #fff;
+                    line-height: 2;
+                    display: block;
+                    opacity: .3;
+                    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+                    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+                }
+                .price-wrap{
+                    padding-top: 3em;
+                }
+                .price-wrap h1 {
+                    letter-spacing: 0;
+                }
+                .price-wrap h1 span{
+                    font-size: 0.400em;
+                    padding-left: .45em;
+                    text-decoration: line-through;
+                    vertical-align: middle;
+                    letter-spacing: 0;
+                    color: #c32f47;
+                }
+                @include sm{
+                    -webkit-align-items: flex-start;
+                    -ms-flex-align: flex-start;
+                    align-items: flex-start;
+                    min-height: 10px;
+                }
+            }
+            &:first-child{
+                .nested{
+                    background: #473287;
+                    ._1of2:last-child{
+                        align-self: flex-start;
+                    }
+                }
+            }
+            &:last-child{
+                    .nested{
+                    background: #39296a;
+                    ._1of2:last-child{
+                        align-self: flex-start;
+                    }
+                }
+            }
+            @include md{
+                flex-basis: 100%;
+                &::nth-child(1){
+                    order: 1;
+                }
+                &::nth-child(2){
+                    order: 2;
+                } 
+                &::nth-child(3){
+                    order: 3;
+                } 
+                ._1of2{
+                    flex-basis: 50%;
+                    .icon{
+                        @include xs{
+                            width: 85px;
+                            height: 85px;
+                            border-width: 2px;
+                            margin-bottom: 2em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .price-wrap{
+            @include md{
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+.bottle-svg-container{
+    text-align: center;
+    @include sm{
+        svg{
+            max-width: 50%;
+        }
+    }
+}
+
+.model-flow-mobile{
+    display: none;
+    @include md{
+        margin: 2em 0;
+        text-align: center;
+        display: block;
+    }
+}

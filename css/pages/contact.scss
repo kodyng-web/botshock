@@ -1,0 +1,52 @@
+
+.contact-us {
+    section.hero {
+        padding-top: 14em;
+        @include md{
+            padding-top: 9em;
+        }
+        .text-wrap{
+            h1{
+                @include sm{
+                    margin: 0.7em 0;
+                }
+            }
+        }
+    }
+
+    .contact-detail {
+        padding-bottom: 2em;
+
+        svg {
+            margin: 3em 0;
+        }
+
+        h3 {
+            letter-spacing: 1px;
+            @include sm{
+                font-size: 18px;
+                margin: .3em 0;
+            }
+        }
+
+        .text-left:nth-child(2) {
+            padding-left: 8em;
+            @include md{
+                padding-left: 0;
+            }
+        }
+
+        #whatsapp{
+            margin-right: 8%;
+        }
+
+        #emailUs{
+            margin-right: 10%;
+        }
+    }
+
+    svg {
+        max-height: 64px;
+        max-width: 64px;
+    }
+}

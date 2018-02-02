@@ -1,0 +1,25 @@
+.error-404{
+    .col-md-7{
+        padding-right:4em;
+        padding-top: 6em;
+    }
+    @include md{
+        a.btn-outer{ 
+            margin-bottom: 4em;
+        }
+    }
+    @include sm{
+        a.btn-outer{
+            text-align: center;
+            position: relative;
+            min-width: 100%;
+            i{
+                position: absolute;
+                right: 5%;
+            }
+        }
+        .col-md-7 {
+            padding: 0;
+        }
+    }
+}

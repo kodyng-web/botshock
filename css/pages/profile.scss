@@ -1,0 +1,135 @@
+
+.profile{ 
+    color: #fff;
+    section.hero{
+        // padding-top: 16em;
+        .f-container{
+            .md-block.head{
+                @include md{
+                    display: flex;
+                    a.sign-out{
+                        align-self: flex-end;
+                        text-align: right;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .sign-out i{
+        padding-left: .5em;
+    }
+
+
+    label{  
+        color: #fff; 
+        font-size: 1.25em;
+        padding-bottom: 10px;
+        font-family: "NexaBold","NexaLight",Helvetica,Arial,sans-serif;
+        display: block; 
+    }
+    .tab-section.nav {
+        >.flex-space{
+            padding:3em 0 0;
+            border-bottom: 1px solid rgba(221,221,221,.3); 
+            >.flex-space{
+                @include md{
+                    width: 100%;
+                }
+            }
+        }
+        .col-md-8 div{
+            
+            padding-bottom: 1em;
+            margin-bottom: -1px;
+            h4{
+                padding: 0 .5em;
+            }
+            &.active{
+                border-bottom: 10px  solid #c32f47;
+                @include md{
+                    border-width: 5px;
+                }
+                @include xs{
+                    border-width: 3px;
+                }
+            }
+        }
+    }
+
+
+    // .personal{    
+    //     padding: 3em 0;    
+    //     border-bottom: 1px solid rgba(221,221,221,.3);
+
+    //     .form-group{
+    //         padding-right: 6em;
+    //     }
+    //     .form-group:nth-child(even){
+    //         padding-right: 0;
+    //     }
+    //     .col-md-6 .form-group{
+    //         padding-right: 3em;
+    //     }
+    // }
+
+    .personal{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3em 0;    
+        border-bottom: 1px solid rgba(221,221,221,.3);
+        .form-group{
+            width: 50%;
+            padding: 0 2%;
+            &:nth-child(odd){
+                padding-left: 0;
+            }
+            &:nth-child(even){
+                padding-right: 0;
+            }
+            @include md{
+                width: 100%;
+                padding: 2% 0;
+            }
+        }
+    }
+
+    .password{
+        padding: 4em 0 3em;
+        border-bottom: 1px solid rgba(221,221,221,.3); 
+        .col-md-6{
+            padding: 2em 0;
+            padding-right: 3em;
+            @include md{
+                padding-right: 0;
+            }
+        }
+    }
+    .form-status {
+        color: #fff;
+        margin-top:4em;
+
+        .col-md-9{
+            padding-top: .75em;
+        }
+        i{
+            padding-right: 1em;
+        }
+        i::before{
+            color: #0abbc1;
+        }
+    }
+    .col-md-12.hidden.visible-md.profile-alert{
+        @include md{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .btn-save{
+        @include md{
+            width: 100%;
+            margin-top: 2em;
+        }
+    }
+} 

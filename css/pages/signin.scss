@@ -1,0 +1,262 @@
+/* vertical flex */
+
+.signin section.hero .f-container + .flex-space {
+  align-items: stretch;
+}
+
+.signin-form, .signup-form {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: -o-fill-available;
+  height: -ms-fill-available;
+  /* height: -webkit-fill-available; */
+}
+
+.signin {
+  .hero{
+    @include sm{
+      padding-top: 0;
+    }
+  }
+  .f-container{
+    .flex-space{
+      @include md{
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .form-group {
+    margin-top: 1rem;
+  }
+  label {
+    color: #fff;
+    font-size: 1.5em;
+    @include xl{
+      font-size: 1em;
+    }
+    @include lg{
+      font-size: 1em;
+    }
+  }
+  .text-lighter {
+    font-size: 1.125em;
+  }
+  form, button {
+    margin: 1em 0 0;
+  }
+  .signin-form {
+    padding-right: 6em;
+    border-right: 1px solid #fff6f9;
+    @include xl{
+      padding-right: 3em;
+    }
+    @include lg{
+      padding-right: 2em;
+    }
+    @include md{
+      padding: 0 0 6em;
+      border: none;
+      flex: 1 0 100%;
+    }
+    @include sm{
+      padding-top: 6em;
+    }
+  }
+  .signup-form {
+    padding-left: 6em;
+    @include xl{
+      padding-left: 3em;
+    }
+    @include lg{
+      padding-left: 2em;
+    }
+    @include md{
+      padding: 6em 0;
+      flex: 1 0 100%;
+    }
+    @include sm{
+      padding: 3em 0;
+    }
+  }
+  label[for="rmb-me"] {
+    font-size: 1.125em;
+  }
+  .signin-form {
+    .btn-login, .btn-fb {
+      width: 100%;
+    }
+    .btn-login {
+      border: 1px solid #fff;
+      background-color: transparent;
+      -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+      transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+      &:hover{
+        background-color: #0abbc1;
+        border: 1px solid #0abbc1;
+        -webkit-box-shadow: 0px 15px 40px -5px #213132, 0 5px 15px -4px #213132;
+        box-shadow: 0px 15px 40px -5px #213132, 0 5px 15px -4px #213132;
+      }
+    }
+    .btn-fb {
+      /*    border: 1px solid #fff;*/
+      background-color: #3e5eb9;
+      -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+      transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+      &:hover{
+          // border-color: #C32F47;
+          // background-color: #C32F47;
+          // color: #fff;
+          -webkit-transform: translate3d(0, -2px, 0);
+          transform: translate3d(0, -2px, 0);
+          -webkit-box-shadow: 0px 15px 40px -5px #222B43, 0 5px 15px -4px #222B43;
+          box-shadow: 0px 15px 40px -5px #222B43, 0 5px 15px -4px #222B43;
+      }
+    }
+  }
+  .line-break {
+    border-bottom: 1px solid #fff;
+    height: 3em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    position: relative;
+    .line-break-inner {
+      background-color: #2F1C41;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 4em;
+      top: 2.4em;
+      text-align: center;
+      margin: auto;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+  [type="checkbox"] {
+    &:not(:checked) + label, &:checked + label {
+      position: relative;
+      /* padding-left: 1.95em; */
+      cursor: pointer;
+    }
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    left: -99999px;
+  }
+  [type="checkbox"] {
+    &:not(:checked) + label:before {
+      content: ' ';
+      color: #495057;
+      width: 1.5em;
+      height: 1.5em;
+      background-color: #fff;
+      background-image: none;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0.25rem;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1em;
+    }
+    &:checked + label {
+      &:before {
+        content: ' ';
+        color: #495057;
+        width: 1.5em;
+        height: 1.5em;
+        background-color: #fff;
+        background-image: none;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1em;
+      }
+      &:after {
+        opacity: 1;
+        transform: scale(1);
+        /*    content: 'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â';*/
+        content: '';
+        position: absolute;
+        top: 0.25em;
+        left: 0.15em;
+        font-size: 1.4em;
+        line-height: 0.8;
+        transition: all .2s;
+        width: 20px;
+        height: 10px;
+        margin: 0px 0 0 0px;
+        border: 5px solid #2F1C41;
+        border-top: none;
+        border-right: none;
+        border-radius: 2px;
+        background: transparent;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .signup-form {
+    h1.head-super {
+      font-size: 8.75em;
+      margin-bottom: 0.3em;
+      @include xl{
+        font-size: 6em;
+        line-height: 1.2em;
+      }
+      @include lg{
+        font-size: 6em;
+        line-height: 1.2em;
+      }
+      @include md{
+        font-size: 6em;
+      }
+      @include sm{
+        font-size: 5em;
+      }
+      @include xs{
+        font-size: 4.167em;
+      }
+    }
+    .btn-signup {
+      width: 100%;
+      -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+      transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+      &:hover{
+          // border-color: #C32F47;
+          // background-color: #C32F47;
+          // color: #fff;
+          -webkit-transform: translate3d(0, -2px, 0);
+          transform: translate3d(0, -2px, 0);
+          -webkit-box-shadow: 0px 15px 40px -5px #36191E, 0 5px 15px -4px #36191E;
+          box-shadow: 0px 15px 40px -5px #36191E, 0 5px 15px -4px #36191E;
+      }
+    }
+  }
+  button{
+    @include xs{
+      font-size: 1em;
+    }
+  }
+  .col-xs-5.text-lighter{
+    @include md{
+      text-align: right;
+    }
+  }
+}
+
+/* general */
+
+/* left */
+
+/*
+.signup label.checkbox-tnc {
+    font-weight: lighter;
+    font-size: 1.125em;
+}
+*/
+
+/* right */

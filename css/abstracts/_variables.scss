@@ -1,0 +1,112 @@
+$body-margin: em-calc(40px);
+$body-max-width: em-calc(1280px);
+$navbar-height: 80px;
+
+
+$color-default: #2f1c41;
+$color-dark: #202020;
+$color-mid: #646464;
+$color-white: #ffffff;
+$color-lighter: #f7f7f7;
+$color-light: #f0f0f0;
+$color-mid-light: #c0c0c0;
+
+
+$color-text: #585858 !default;
+$color-main:#2f1c41;
+
+$color-red: #c32f47;
+$color-red-highlight: #de0031;
+$color-pink: #e1447c;
+$color-pink-highlight: #c73a75;
+$color-navy: #004185;
+$color-navy-highlight: #5284b9;
+$color-orange-highlight: #ff9000;
+
+$color-blue: #007df2;
+$color-green: #76bd1d;
+$color-yellow: #f6d900;
+$color-orange: #ff8a00;
+
+
+$size-xxl: em-calc(65px);
+$size-xl: em-calc(60px);
+$size-l: em-calc(40px);
+$size-m: em-calc(35px);
+$size-s: em-calc(26px);
+$size-xs: em-calc(23px);
+
+
+$screen-xl: 1200px;
+
+// @mixin mid {
+//   @media only screen and (min-width: 450px) and (max-width: 770px) {
+//     @content;
+//   }
+// }
+
+// @mixin large {
+//   @media only screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+
+
+@mixin xxl {
+  @media only screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: 1200px) and (max-width: 1599px){
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @media only screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin md2xl {
+  @media only screen and (min-width: 992px) and (max-width: 1599px){
+    @content;
+  }
+}
+
+// Fonts
+
+$font-base-size: 16px !default;
+$font-primary: "Noto Sans TC", "Helvetica Neue Light", "Helvetica Neue", "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", Helvetica, Arial, sans-serif !default;
+
+// Miscellaneous
+$image-path: "/assets/images";
+
+
+//header

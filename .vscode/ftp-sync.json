@@ -1,0 +1,26 @@
+{
+    "remotePath": "kody/botshock/2017",
+    "host": "o1.as1-int.com",
+    "username": "demo",
+    "password": "as1-3228",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": true,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store",
+        "\\node_modules"
+        
+    ],
+    "generatedFiles": {
+        "uploadOnSave": false,
+        "extensionsToInclude": [],
+        "path": ""
+    }
+}

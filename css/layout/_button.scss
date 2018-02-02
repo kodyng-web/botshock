@@ -1,0 +1,237 @@
+$red: #c32f47;
+$blue: #3e5eb9;
+$green: #0abbc1;
+
+
+
+
+
+.btn-login {
+    background: $green;
+    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    &:hover{
+        // border-color: #C32F47;
+        // background-color: #C32F47;
+        // color: #fff;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0px 15px 40px -5px rgba(10, 187, 193, 0.65), 0 5px 15px -4px rgba(10, 187, 193, 0.85);
+        box-shadow: 0px 15px 40px -5px rgba(10, 187, 193,0.65), 0 5px 15px -4px rgba(10, 187, 193,0.85);
+    }
+}
+
+.btn-facebook {
+    background: $blue;
+    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    &:hover{
+        // border-color: #C32F47;
+        // background-color: #C32F47;
+        // color: #fff;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0px 15px 40px -5px rgba(62, 94, 185, 0.65), 0 5px 15px -4px rgba(62, 94, 185, 0.85);
+        box-shadow: 0px 15px 40px -5px rgba(62, 94, 185,0.65), 0 5px 15px -4px rgba(62, 94, 185,0.85);
+    }
+}
+
+.btn-signup {
+    margin-top: 6px;
+    background: $red;
+    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    &:hover{
+        // border-color: #C32F47;
+        // background-color: #C32F47;
+        // color: #fff;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0px 15px 40px -5px rgba(195, 74, 71, 0.65), 0 5px 15px -4px rgba(195, 74, 71, 0.85);
+        box-shadow: 0px 15px 40px -5px rgba(195, 74, 71, 0.65), 0 5px 15px -4px rgba(195, 74, 71, 0.85);
+    }
+}
+
+.btn-save {
+    background: $green;
+    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    &:hover{
+        // border-color: #C32F47;
+        // background-color: #C32F47;
+        // color: #fff;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0px 15px 40px -5px rgba(7, 61, 62, 0.5), 0 5px 15px -4px rgba(7, 61, 62, 0.4);
+        box-shadow: 0px 15px 40px -5px rgba(7, 61, 62, 0.5), 0 5px 15px -4px rgba(7, 61, 62, 0.4);
+    }
+}
+
+.btn-get {
+    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    &:hover{
+        // border-color: #C32F47;
+        // background-color: #C32F47;
+        // color: #fff;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0px 15px 40px -5px #36191E, 0 5px 15px -4px #36191E;
+        box-shadow: 0px 15px 40px -5px #36191E, 0 5px 15px -4px #36191E;
+    }
+    h5 {
+        background: $red;
+        padding: 2em 4em;
+    }
+}
+
+.btn-group {
+    a {
+        margin-right: 3em;
+    }
+}
+
+.btn-outer {
+    padding: 2em 2em 2em 3em;
+    border: 1px solid #adadad;
+    display: inline-block;
+    min-width: 300px;
+    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    .white {
+        border-color: #fff;
+    }
+    &:hover{
+        border-color: #8B2442;
+        background-color: #8B2442;
+        color: #fff;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0 15px 40px -5px rgba(117, 33, 57, 0.65), 0 5px 15px -4px rgba(117, 33, 57, 0.85);
+        box-shadow: 0 15px 40px -5px rgba(117, 33, 57,0.65), 0 5px 15px -4px rgba(117, 33, 57,0.85);
+        
+    }
+}
+
+
+.btn-outer i {
+    padding-left: 6em;
+}
+
+.btn-more {
+    display: inherit;
+    &:hover{
+        color: #c32f47;
+        .icon-arrow:before{
+            color: #c32f47;
+        }
+    }
+
+    i {
+        padding-left: 1em;
+    }
+}
+
+.btn-view {
+    background: $red;
+    color: #fff;
+    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    &:hover{
+        // border-color: #8B2442;
+        // background-color: #8B2442;
+        // color: #fff;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0px 15px  40px -5px rgba(117, 33, 57, 0.65), 0 5px 15px -4px rgba(117, 33, 57, 0.85);
+        box-shadow: 0px 15px  40px -5px rgba(117, 33, 57,0.65), 0 5px 15px -4px rgba(117, 33, 57,0.85);
+        
+    }
+
+    a {
+        padding: 2em 0;
+        display: block;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+}
+
+.disable{  
+    .btn-view{
+        &:hover{
+            // border-color: #8B2442;
+            // background-color: #8B2442;
+            // color: #fff;
+            -webkit-transform: translate3d(0, -2px, 0);
+            transform: translate3d(0, -2px, 0);
+            -webkit-box-shadow: 0px 15px  40px -5px rgba(19, 8, 23, 0.65), 0 5px 15px -4px rgba(19, 8, 23, 0.85);
+            box-shadow: 0px 15px  40px -5px rgba(19, 8, 23,0.65), 0 5px 15px -4px rgba(19, 8, 23,0.85);
+        }
+    }
+}
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    @include transition($btn-transition);
+
+    // Share hover and focus styles
+    @include hover-focus {
+        text-decoration: none;
+    }
+
+
+    &:focus,
+    &.focus {
+        outline: 0;
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: .65;
+
+        @include box-shadow(none);
+    }
+
+    &:active,
+    &.active {
+        background-image: none;
+    }
+}
+
+a.btn.disabled,
+fieldset[disabled] a.btn {
+    pointer-events: none;
+}
+
+
+
+a.sign-out{
+    &:hover{
+    color: #c32f47;
+        p{
+            .icon-arrow-l:before{
+            color: #c32f47;
+            }
+        }
+    }
+} 
+
+
+a.see-details{
+    &:hover{
+    color: #c32f47;
+        .icon-arrow-d:before{
+        color: #c32f47;
+        }
+    }
+    @include sm{
+        display: none;
+    }
+} 

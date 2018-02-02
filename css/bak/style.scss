@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NexaBold';
+    src: url("../fonts/NexaBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NexaBold.otf") format("opentype"), url("../fonts/NexaBold.woff") format("woff"), url("../fonts/NexaBold.ttf") format("truetype"), url("../fonts/NexaBold.svg#../fonts/NexaBold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NexaLight';
+    src: url("../fonts/NexaLight.eot?#iefix") format("embedded-opentype"), url("../fonts/NexaLight.otf") format("opentype"), url("../fonts/NexaLight.woff") format("woff"), url("../fonts/NexaLight.ttf") format("truetype"), url("../fonts/NexaLight.svg#../fonts/NexaLight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "abstracts/variables";
+@import "abstracts/functions";
+// @import "abstracts/mixins";
+@import "base/reset";
+@import "base/typography" ;
+@import "base/helpers";
+@import "base/icon"; 
+
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "type";
+@import "forms"; 
+@import "custom-forms";
+@import "modal";
+
+
+// plugin
+@import "vendor/bootstrap";
+@import "layout/header";
+@import "vendor/animation";
+
+@import "layout/button";
+@import "layout/form";
+@import "layout/footer";
+@import "pages/forget";
+@import "pages/signup";
+@import "pages/signin";
+@import "pages/purchase";
+@import "pages/thankyou";
+@import "pages/popup";
+@import "pages/hero";
+@import "pages/section";
+@import "pages/about";
+@import "pages/profile";
+@import "pages/myorder";
+@import "pages/detail";
+@import "pages/browser";
+@import "pages/contact";
+@import "pages/404";
+
+@media screen and (min-width: 0\0) {
+    img[src$=".svg"] { 
+        width: auto; 
+        height: auto;
+    }
+    svg:not(:root){
+        height: auto;
+    }
+} 

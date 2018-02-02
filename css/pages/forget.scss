@@ -1,0 +1,40 @@
+.forget {
+  section{
+    @include xs{
+      padding-top: 8em;
+    }
+  }
+  .text-lighter {
+    margin: 1em 0;
+    @include xs{
+      padding-bottom: 2em;
+    }
+  }
+  button {
+    margin-top: 2em;
+  }
+  label {
+    color: #fff;
+    display: block;
+  }
+  input {
+    display: block;
+  }
+  .btn-restore-pw {
+    background-color: #08bbac;
+    -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+    &:hover{
+        // border-color: #C32F47;
+        // background-color: #C32F47;
+        // color: #fff;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0px 15px 40px -5px rgba(7, 61, 62, 0.5), 0 5px 15px -4px rgba(7, 61, 62, 0.4);
+        box-shadow: 0px 15px 40px -5px rgba(7, 61, 62, 0.5), 0 5px 15px -4px rgba(7, 61, 62, 0.4);
+    }
+    @include md{
+      width: 100%;
+    }
+  }
+}

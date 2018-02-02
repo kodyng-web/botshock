@@ -1,0 +1,625 @@
+/**
+ * CSS helper classes
+ */
+
+//============================================================
+// Typography
+//============================================================
+
+// An rem font-size mixin providing fallback to px
+@mixin font-size($sizeValue: 1.4) {
+    font-size: #{$pxValue}px;
+    font-size: #{$remValue}rem;
+
+    $remValue: $sizeValue;
+    $pxValue: $sizeValue * 10;
+}
+
+// Requires inline-block or block for proper styling
+@mixin text-truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//============================================================
+// Transforms
+//============================================================
+
+// Browser Prefixes
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+// Rotate
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin transform-origin($arguments...) {
+    -webkit-transform-origin: $arguments;
+    -ms-transform-origin: $arguments;
+
+    // IE9
+    transform-origin: $arguments;
+}
+
+@mixin rotate($arguments...) {
+    -webkit-transform: rotate($arguments);
+    -ms-transform: rotate($arguments);
+
+    // IE9
+    transform: rotate($arguments);
+}
+
+@mixin backface-visibility($arguments) {
+    -webkit-backface-visibility: $arguments;
+    -moz-backface-visibility: $arguments;
+    -ms-backface-visibility: $arguments;
+    -o-backface-visibility: $arguments;
+    backface-visibility: $arguments;
+}
+
+//============================================================
+// Animations
+//============================================================
+
+@mixin transition($arguments...) {
+    -webkit-transition: $arguments;
+    transition: $arguments;
+}
+
+@mixin animation($arguments) {
+    -webkit-animation: $arguments;
+    animation: $arguments;
+}
+
+//============================================================
+// Gradients
+//============================================================
+
+@mixin linear-gradient($from, $to) {
+    background-color: $from;
+    background-image: -webkit-linear-gradient(top, $from, $to);
+
+    /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image: linear-gradient(to bottom, $from, $to);
+
+    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+//============================================================
+// Structure
+//============================================================
+
+@mixin box-sizing($arguments) {
+    -webkit-box-sizing: $arguments;
+    -moz-box-sizing: $arguments;
+    box-sizing: $arguments;
+    -o-box-sizing: $arguments;
+}
+
+//============================================================
+//
+// Easing
+//
+// Thanks to Robert Penner for his sterling work on easing,
+// and to Matthew Lein for converting these functions into
+// approximated cubic-bezier functions. Respect.
+//
+// @see http://robertpenner.com/
+// @see http://matthewlein.com/ceaser/
+//
+//============================================================
+
+// Cubic
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Circ
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+// Expo
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+// Quad
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+// Quart
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+
+// Quint
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+
+// Sine
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+// Back
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: '';
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.clear-both {
+    clear: both;
+}
+.text-red{
+    color:$text-color--red
+}
+.text-l-led{
+    color: #ff0029;
+    letter-spacing: 0;
+}
+.text-white{
+    color: #fff;    
+}
+.text-bold{
+    font-weight: Bold;
+    font-family: 'NexaBold';
+}
+.text-lighter {
+    font-weight: lighter;
+    font-family: 'NexaLight';
+}
+
+.text-normal {
+    font-weight: normal;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/*// hide element*/
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+
+/*// show element*/
+.visible {
+    display: block !important;
+}
+
+/*// make element invisible*/
+.invisible {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.dis-link {
+    pointer-events: none;
+}
+
+.inline-block{
+    display: inline-block;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-hide {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.block-center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.center-block-horizontal {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.center-block-vertical {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.center-block-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .center-block-reset--mobile {
+        position: static;
+        top: auto;
+        left: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        transform: translate(0);
+    }
+}
+
+.table-fix {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.card-wrap{
+    -webkit-box-shadow: 7px 7px 40px rgba(1,1,1,.5);
+	-moz-box-shadow: 7px 7px 40px rgba(1,1,1,.5);
+	box-shadow: 7px 7px 40px rgba(1,1,1,.5);
+}
+
+.img-wrap img{
+    -webkit-box-shadow: 10px 10px 43px rgba(1,1,1,.5);
+	-moz-box-shadow: 10px 10px 43px rgba(1,1,1,.5);
+	box-shadow: 10px 10px 43px rgba(1,1,1,.5);
+}
+.table-cell {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+.media__inner {
+    display: block;
+    position: relative;
+}
+
+.media__image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.ani {
+    visibility: hidden;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden
+}
+
+html.fixed {
+    overflow: hidden
+}
+body{
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+     overflow-x: hidden;
+}
+.main{
+     flex: 1 0 auto;
+}
+.flex{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    &-space{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.flex-grid{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+.flex-equal-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1; 
+    -ms-flex: 1;
+    flex: 1;
+    align-items: center; 
+    justify-content: center; 
+}
+.flex-equal-height-card {
+    position: relative; 
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1; 
+    flex: 1;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-2{
+    flex: 2;
+}
+.flex-3{
+    flex: 3;
+}
+.flex-collection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+.flex-collection-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.flex-collection-cell {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flex-collection-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.flex-collection-cell._1of2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+.flex-collection-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 240px;
+    padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.flex-center{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 360px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.none{
+    display: none;
+}
+
+@include md{
+    .md-block{
+       display: block; 
+    }  
+}
+
+@include sm{
+    .sm-block{
+       display: block; 
+    }  
+}
+
+@include xs{
+    .xs-block{
+       display: block; 
+    }  
+}

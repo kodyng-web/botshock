@@ -1,0 +1,28 @@
+.browser-header{
+    .navbar__logo{
+        margin-top: 2em;
+    }
+}
+
+.broswer {
+    section.hero {
+        padding: 14em 0 20em;
+        @include md{
+            padding-top: 12em;
+        }
+    }
+}
+
+.brsower__icon {
+    padding-top: 4em;
+
+    div {
+        vertical-align: middle;
+        padding-right: 1em;
+    }
+
+    div a {
+        border-bottom: 1px solid;
+        display: inline-block;
+    }
+}

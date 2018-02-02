@@ -1,0 +1,166 @@
+.color-sent{
+    color: #00ccd3;
+}
+.color-pend{
+    color: #c32f47;
+}
+
+section.myorder{
+
+    .tab-title{
+        background: rgb(68,51,84);
+        padding: 1.25em 1em;
+        position: relative;
+        
+        &::after{
+            display: block;
+            content: "";
+            width: 1px;
+            right: 0;
+            top: 0;
+            height: 100%;
+            position: absolute;
+            background: #2f1c41;
+            @include md{
+                &:last-child{
+                    background-color: transparent;
+                }
+            }
+            
+        }
+    }    
+    .flex-1{
+        &:last-child{
+            .tab-title{
+                &:after{
+                    @include md{
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .order-tab{
+        flex-direction: row;
+        .row{
+            padding-top: 2.5em;
+        }
+        .flex-2.flex-space{                
+            background: #3a284b;     
+        }
+        
+        .bor.md-block{
+            .tab-title:after{
+                @include md{
+                    background-color: transparent;
+                }
+            }
+        }
+        .inner-wrap{
+            padding: 2em 3em 6em 3em;              
+            background: #3a284b;     
+            @include md{
+                padding-bottom: 2em;
+            }
+            @include sm{
+                padding: 2em;
+            }
+            @include xs{
+                padding: 2em 1em 2em;
+            }
+ 
+            .flex-2{
+                padding-top: 1.75em;
+                    @include md{
+                        padding-top: 0;
+                    }
+            }
+        }
+        .flex-2,
+        .flex-1{
+            position: relative;
+        }      
+        .flex-2.bor::before,         
+        .flex-1::before{
+            display: block;
+            content: "";
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            position: absolute;
+            background: #2f1c41;
+        }  
+        .flex-2.bor::after,         
+        .flex-1::after{
+            display: block;
+            content: "";
+            width: 1px;
+            right: 0;
+            top: 0;
+            height: 100%;
+            position: absolute;
+            background: #2f1c41;
+        }
+        .round{
+            margin-right: 2em;
+            width: 90px;
+            height: 90px;
+            background: #eee;
+            @include md{
+                flex: 0 0 auto;
+            }
+            @include xs{
+                height: 70px;
+                width: 70px;
+            }
+        }
+        .date{
+            padding-right: 3em;
+            @include md{
+                padding-right: 0;
+            }
+            .flex-space{
+                flex-wrap: wrap;
+            }
+            span{
+                @include xxs{
+                    width: 100%;
+                    margin-bottom: .5em;
+                }
+            }
+        }
+        .round-md{
+            display: flex;
+            align-items: center;
+        }
+
+        @include md{
+            .flex-2{
+                h4{
+                    line-height: 2em;
+                    @include xs{
+                        line-height: 1.5em;
+                    }
+                }
+                h4.product-name{
+                    line-height: 1.4em;
+                }
+            }
+        }
+
+    }
+    .btn-red{
+        margin: 2em 0;
+        background: #c32f47;
+        padding: 1em 2em;
+        -webkit-transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+        transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+        &:hover{
+            -webkit-transform: translate3d(0, -2px, 0);
+            transform: translate3d(0, -2px, 0);
+            -webkit-box-shadow: 0px 15px 40px -5px #36191E, 0 5px 15px -4px #36191E;
+            box-shadow: 0px 15px 40px -5px #36181D, 0 5px 15px -4px #36191E;
+        }
+    }
+}
