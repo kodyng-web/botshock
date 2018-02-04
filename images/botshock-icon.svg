@@ -11,8 +11,13 @@
 		</image>
 	</g>
 </g>
+<<<<<<< HEAD
 <g id="圖層_2" display="none">
 	<text transform="matrix(1 0 0 1 132.8342 42.5)" display="inline" fill="#FFFFFF" font-family="'Candara'" font-size="36">logo</text>
+=======
+<g id="圖層_2">
+	<text transform="matrix(1 0 0 1 13.1672 42.5)" fill="#FFFFFF" font-family="'Candara'" font-size="36">logo</text>
+>>>>>>> parent of 88ab252... 1
 </g>
 =======
 =======
